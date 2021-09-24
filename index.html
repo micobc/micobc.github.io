@@ -19,19 +19,44 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-  <p>Welcome to __! Please excuse us for being forced by the Provincial Health Officer Order to ask the following:</p>
-  <p>Have you experienced any flu-like symptoms in the last 14 days?</p>
-  <button id="yes">Yes</button>
-  <button id="no">No</button>
-  <p>Is your government-issued vaccination ID in compliance with the Provincial Health Officer Order <a href="#">[CLICK HERE TO READ ORDER]<a></p>
-  <button id="yes">Yes</button>
-  <button id="no">No</button>
-  <p>THANK YOU! You are eligible to proceed, we hope you enjoy your meal. </p>
-  <p>SORRY! According to Provincial Health Officer Orders, you cannot proceed past this point. We hope the Provincial Health Officer will allow us to serve you soon! The hostess will seat all parties proceeding past this terminal. Thank you for your patience</p>
-  <script src="js/main.js"></script>
+  <div class="container-fluid">
+
+    <h1 class="display-4 text-align">Welcome</h1> 
+    <h1 class="display-6 text-align">Please excuse us for being forced by the Provincial</h1>
+    <h1 class="display-6 text-align">Health Officer Order to ask the following:</h1>
+    </br>
+    
+    <p class="text-align">Have you experienced any flu-like symptoms in the last 14 days?</p>
+    <!--added the onclicks for you below.-->
+      <div class="outer">
+        <div class="center">
+          <button class="btn btn-primary" id="yes" onclick="#">Yes</button>
+          <button class="btn btn-primary" id="no" onclick="#">No</button>
+        </div>
+      </div>
+       <!--end of column div-->
+      <p class="text-align">Is your government-issued vaccination ID in compliance with the Provincial Health Officer Order?</p>
+        <p class="text-align"><a href="#" target="_blank"><strong>CLICK HERE TO READ ORDER</strong></a></p>
+         <div class="outer">
+          <div class="center">
+            <button class="btn btn-primary" id="yes" onclick="#">Yes</button>
+            <button class="btn btn-primary" id="no" onclick="#">No</button> 
+          </div>
+         </div> 
+        <div class="no-display"> <!--These won't show now.-->
+          <p class="text-align"><strong>THANK YOU!</strong> </p>
+      <p class="text-align">You are eligible to proceed, we hope you enjoy your meal. </p> <!--you could do a script to hide this until its approved.-->
+      <p class="text-align"><strong></P>
+      <P class="text-align">SORRY!</strong></p>
+      <p class="text-align">According to Provincial Health Officer Orders, you cannot proceed past this point. We hope the Provincial Health Officer will allow us to serve you soon! The hostess will seat all parties proceeding past this terminal. Thank you for your patience</p>
+        </div>
+      
+    <script src="js/main.js"></script>
+  </div>
 </body>
 </html>

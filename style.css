@@ -1,0 +1,53 @@
+/*custom css*/
+body {
+    margin-top: 150px;
+}
+
+.text-align {
+    text-align:center;
+}
+
+.outer {
+    height: 50px;
+  position: relative;
+}
+
+.no-display {
+    /* this is for the Sorry and Thank you Statements. */
+    display:none;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+/*for links */
+/* unvisited link */
+a:link {
+    text-decoration: none;
+    color: red;
+  }
+  
+  /* visited link */
+  a:visited {
+    text-decoration: none;
+    color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    text-decoration: none;
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    text-decoration: none;
+    color: blue;
+  }
