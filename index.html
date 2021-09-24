@@ -30,31 +30,45 @@
     <h1 class="display-6 text-align">Please excuse us for being forced by the Provincial</h1>
     <h1 class="display-6 text-align">Health Officer Order to ask the following:</h1>
     </br>
-    
-    <p class="text-align">Have you experienced any flu-like symptoms in the last 14 days?</p>
-    <!--added the onclicks for you below.-->
-      <div class="outer">
-        <div class="center">
-          <button class="btn btn-primary" id="yes" onclick="#">Yes</button>
-          <button class="btn btn-primary" id="no" onclick="#">No</button>
+    <div id="flu">
+      <p class="text-align">Have you experienced any flu-like symptoms in the last 14 days?</p>
+      <!--added the onclicks for you below.-->
+        <div class="outer">
+          <div class="center">
+            <button class="btn btn-primary" id="yes" onclick="showMessage('failure')">Yes</button>
+            <button class="btn btn-primary" id="no" onclick="showMessage('compliance')">No</button>
+          </div>
         </div>
       </div>
-       <!--end of column div-->
+    <div id="compliance">
       <p class="text-align">Is your government-issued vaccination ID in compliance with the Provincial Health Officer Order?</p>
-        <p class="text-align"><a href="#" target="_blank"><strong>CLICK HERE TO READ ORDER</strong></a></p>
+        <p class="text-align"><a href="https://www2.gov.bc.ca/assets/gov/health/about-bc-s-health-care-system/office-of-the-provincial-health-officer/covid-19/covid-19-pho-order-nightclubs-food-drink.pdf" target="_blank"><strong>CLICK HERE TO READ ORDER</strong></a></p>
          <div class="outer">
           <div class="center">
-            <button class="btn btn-primary" id="yes" onclick="#">Yes</button>
-            <button class="btn btn-primary" id="no" onclick="#">No</button> 
+            <button class="btn btn-primary" id="yes" onclick="showMessage('success')">Yes</button>
+            <button class="btn btn-primary" id="no" onclick="showMessage('failure')">No</button> 
           </div>
-         </div> 
-        <div class="no-display"> <!--These won't show now.-->
-          <p class="text-align"><strong>THANK YOU!</strong> </p>
-      <p class="text-align">You are eligible to proceed, we hope you enjoy your meal. </p> <!--you could do a script to hide this until its approved.-->
-      <p class="text-align"><strong></P>
-      <P class="text-align">SORRY!</strong></p>
-      <p class="text-align">According to Provincial Health Officer Orders, you cannot proceed past this point. We hope the Provincial Health Officer will allow us to serve you soon! The hostess will seat all parties proceeding past this terminal. Thank you for your patience</p>
+        </div> 
+      </div>
+      <div id="success">
+        <p class="text-align"><strong>THANK YOU!</strong> </p>
+        <p class="text-align">You are eligible to proceed, we hope you enjoy your meal. </p> <!--you could do a script to hide this until its approved.-->
+        <p class="text-align"><strong></P>
+         <div class="outer">
+          <div class="center">
+            <button class="btn btn-primary" onclick="resetApp()">Ok</button>
+          </div>
+         </div>
+      </div>
+      <div id="failure">
+        <P class="text-align">SORRY!</strong></p>
+        <p class="text-align">According to Provincial Health Officer Orders, you cannot proceed past this point. We hope the Provincial Health Officer will allow us to serve you soon! The hostess will seat all parties proceeding past this terminal. Thank you for your patience</p>
+        <div class="outer">
+          <div class="center">
+            <button class="btn btn-primary" onclick="resetApp()">Ok</button>
+          </div>
         </div>
+      </div>
       
     <script src="js/main.js"></script>
   </div>
